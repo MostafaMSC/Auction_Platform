@@ -1,0 +1,331 @@
+{
+  "Version": 1,
+  "Hash": "HUZ+RoG45wcN82pTEXTL+qSqrKxp9X6iO8QGb6PL2Q8=",
+  "Source": "Presentation",
+  "BasePath": "_content/Presentation",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "Presentation\\wwwroot",
+      "Source": "Presentation",
+      "ContentRoot": "C:\\Users\\MSI\\Desktop\\AuctionSystem\\presentation\\wwwroot\\",
+      "BasePath": "_content/Presentation",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\MSI\\Desktop\\AuctionSystem\\presentation\\wwwroot\\uploads\\dc8f9366-12a7-4871-a1c4-80fb7998eb66_XX\\d03df5dc-9c33-490a-8d6d-3675dc60d11f_1754282836_0_vehicles_export_2025-07-31.xls",
+      "SourceId": "Presentation",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\MSI\\Desktop\\AuctionSystem\\presentation\\wwwroot\\",
+      "BasePath": "_content/Presentation",
+      "RelativePath": "uploads/dc8f9366-12a7-4871-a1c4-80fb7998eb66_XX/d03df5dc-9c33-490a-8d6d-3675dc60d11f_1754282836_0_vehicles_export_2025-07-31#[.{fingerprint}]?.xls",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "lcwxz6b2rk",
+      "Integrity": "+9JZ13vxydmA/5sP4R+i6GQl2p+YpgkRhyGoI+MKzfw=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\dc8f9366-12a7-4871-a1c4-80fb7998eb66_XX\\d03df5dc-9c33-490a-8d6d-3675dc60d11f_1754282836_0_vehicles_export_2025-07-31.xls"
+    },
+    {
+      "Identity": "C:\\Users\\MSI\\Desktop\\AuctionSystem\\presentation\\wwwroot\\uploads\\string\\1373a51f-745f-47b3-943e-887443e28c0f_1754282836_0_vehicles_export_2025-07-31.xls",
+      "SourceId": "Presentation",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\MSI\\Desktop\\AuctionSystem\\presentation\\wwwroot\\",
+      "BasePath": "_content/Presentation",
+      "RelativePath": "uploads/string/1373a51f-745f-47b3-943e-887443e28c0f_1754282836_0_vehicles_export_2025-07-31#[.{fingerprint}]?.xls",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "lcwxz6b2rk",
+      "Integrity": "+9JZ13vxydmA/5sP4R+i6GQl2p+YpgkRhyGoI+MKzfw=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\string\\1373a51f-745f-47b3-943e-887443e28c0f_1754282836_0_vehicles_export_2025-07-31.xls"
+    },
+    {
+      "Identity": "C:\\Users\\MSI\\Desktop\\AuctionSystem\\presentation\\wwwroot\\uploads\\string\\c699e47c-c30c-4a6f-90fa-9fdbb90283ce_1754282836_0_vehicles_export_2025-07-31.xls",
+      "SourceId": "Presentation",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\MSI\\Desktop\\AuctionSystem\\presentation\\wwwroot\\",
+      "BasePath": "_content/Presentation",
+      "RelativePath": "uploads/string/c699e47c-c30c-4a6f-90fa-9fdbb90283ce_1754282836_0_vehicles_export_2025-07-31#[.{fingerprint}]?.xls",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "lcwxz6b2rk",
+      "Integrity": "+9JZ13vxydmA/5sP4R+i6GQl2p+YpgkRhyGoI+MKzfw=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\string\\c699e47c-c30c-4a6f-90fa-9fdbb90283ce_1754282836_0_vehicles_export_2025-07-31.xls"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "uploads/dc8f9366-12a7-4871-a1c4-80fb7998eb66_XX/d03df5dc-9c33-490a-8d6d-3675dc60d11f_1754282836_0_vehicles_export_2025-07-31.lcwxz6b2rk.xls",
+      "AssetFile": "C:\\Users\\MSI\\Desktop\\AuctionSystem\\presentation\\wwwroot\\uploads\\dc8f9366-12a7-4871-a1c4-80fb7998eb66_XX\\d03df5dc-9c33-490a-8d6d-3675dc60d11f_1754282836_0_vehicles_export_2025-07-31.xls",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3104"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/vnd.ms-excel"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"+9JZ13vxydmA/5sP4R+i6GQl2p+YpgkRhyGoI+MKzfw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 15 Aug 2025 17:00:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "lcwxz6b2rk"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/dc8f9366-12a7-4871-a1c4-80fb7998eb66_XX/d03df5dc-9c33-490a-8d6d-3675dc60d11f_1754282836_0_vehicles_export_2025-07-31.xls"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-+9JZ13vxydmA/5sP4R+i6GQl2p+YpgkRhyGoI+MKzfw="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/dc8f9366-12a7-4871-a1c4-80fb7998eb66_XX/d03df5dc-9c33-490a-8d6d-3675dc60d11f_1754282836_0_vehicles_export_2025-07-31.xls",
+      "AssetFile": "C:\\Users\\MSI\\Desktop\\AuctionSystem\\presentation\\wwwroot\\uploads\\dc8f9366-12a7-4871-a1c4-80fb7998eb66_XX\\d03df5dc-9c33-490a-8d6d-3675dc60d11f_1754282836_0_vehicles_export_2025-07-31.xls",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3104"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/vnd.ms-excel"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"+9JZ13vxydmA/5sP4R+i6GQl2p+YpgkRhyGoI+MKzfw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 15 Aug 2025 17:00:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-+9JZ13vxydmA/5sP4R+i6GQl2p+YpgkRhyGoI+MKzfw="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/string/1373a51f-745f-47b3-943e-887443e28c0f_1754282836_0_vehicles_export_2025-07-31.lcwxz6b2rk.xls",
+      "AssetFile": "C:\\Users\\MSI\\Desktop\\AuctionSystem\\presentation\\wwwroot\\uploads\\string\\1373a51f-745f-47b3-943e-887443e28c0f_1754282836_0_vehicles_export_2025-07-31.xls",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3104"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/vnd.ms-excel"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"+9JZ13vxydmA/5sP4R+i6GQl2p+YpgkRhyGoI+MKzfw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 15 Aug 2025 16:43:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "lcwxz6b2rk"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/string/1373a51f-745f-47b3-943e-887443e28c0f_1754282836_0_vehicles_export_2025-07-31.xls"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-+9JZ13vxydmA/5sP4R+i6GQl2p+YpgkRhyGoI+MKzfw="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/string/1373a51f-745f-47b3-943e-887443e28c0f_1754282836_0_vehicles_export_2025-07-31.xls",
+      "AssetFile": "C:\\Users\\MSI\\Desktop\\AuctionSystem\\presentation\\wwwroot\\uploads\\string\\1373a51f-745f-47b3-943e-887443e28c0f_1754282836_0_vehicles_export_2025-07-31.xls",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3104"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/vnd.ms-excel"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"+9JZ13vxydmA/5sP4R+i6GQl2p+YpgkRhyGoI+MKzfw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 15 Aug 2025 16:43:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-+9JZ13vxydmA/5sP4R+i6GQl2p+YpgkRhyGoI+MKzfw="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/string/c699e47c-c30c-4a6f-90fa-9fdbb90283ce_1754282836_0_vehicles_export_2025-07-31.lcwxz6b2rk.xls",
+      "AssetFile": "C:\\Users\\MSI\\Desktop\\AuctionSystem\\presentation\\wwwroot\\uploads\\string\\c699e47c-c30c-4a6f-90fa-9fdbb90283ce_1754282836_0_vehicles_export_2025-07-31.xls",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3104"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/vnd.ms-excel"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"+9JZ13vxydmA/5sP4R+i6GQl2p+YpgkRhyGoI+MKzfw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 15 Aug 2025 16:27:55 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "lcwxz6b2rk"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/string/c699e47c-c30c-4a6f-90fa-9fdbb90283ce_1754282836_0_vehicles_export_2025-07-31.xls"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-+9JZ13vxydmA/5sP4R+i6GQl2p+YpgkRhyGoI+MKzfw="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/string/c699e47c-c30c-4a6f-90fa-9fdbb90283ce_1754282836_0_vehicles_export_2025-07-31.xls",
+      "AssetFile": "C:\\Users\\MSI\\Desktop\\AuctionSystem\\presentation\\wwwroot\\uploads\\string\\c699e47c-c30c-4a6f-90fa-9fdbb90283ce_1754282836_0_vehicles_export_2025-07-31.xls",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3104"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/vnd.ms-excel"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"+9JZ13vxydmA/5sP4R+i6GQl2p+YpgkRhyGoI+MKzfw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 15 Aug 2025 16:27:55 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-+9JZ13vxydmA/5sP4R+i6GQl2p+YpgkRhyGoI+MKzfw="
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+C:\Users\MSI\Desktop\AuctionSystem\Application\obj\Debug\net9.0\application.csproj.AssemblyReference.cache
+C:\Users\MSI\Desktop\AuctionSystem\Application\obj\Debug\net9.0\application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MSI\Desktop\AuctionSystem\Application\obj\Debug\net9.0\application.AssemblyInfoInputs.cache
+C:\Users\MSI\Desktop\AuctionSystem\Application\obj\Debug\net9.0\application.AssemblyInfo.cs
+C:\Users\MSI\Desktop\AuctionSystem\Application\obj\Debug\net9.0\application.csproj.CoreCompileInputs.cache
+C:\Users\MSI\Desktop\AuctionSystem\Application\bin\Debug\net9.0\application.deps.json
+C:\Users\MSI\Desktop\AuctionSystem\Application\bin\Debug\net9.0\application.dll
+C:\Users\MSI\Desktop\AuctionSystem\Application\bin\Debug\net9.0\application.pdb
+C:\Users\MSI\Desktop\AuctionSystem\Application\bin\Debug\net9.0\domain.dll
+C:\Users\MSI\Desktop\AuctionSystem\Application\bin\Debug\net9.0\domain.pdb
+C:\Users\MSI\Desktop\AuctionSystem\Application\obj\Debug\net9.0\applicat.45FA8C82.Up2Date
+C:\Users\MSI\Desktop\AuctionSystem\Application\obj\Debug\net9.0\application.dll
+C:\Users\MSI\Desktop\AuctionSystem\Application\obj\Debug\net9.0\refint\application.dll
+C:\Users\MSI\Desktop\AuctionSystem\Application\obj\Debug\net9.0\application.pdb
+C:\Users\MSI\Desktop\AuctionSystem\Application\obj\Debug\net9.0\ref\application.dll

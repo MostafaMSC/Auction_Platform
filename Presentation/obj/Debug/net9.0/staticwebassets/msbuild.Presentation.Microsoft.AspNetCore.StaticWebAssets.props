@@ -1,0 +1,58 @@
+﻿<Project>
+  <ItemGroup>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\dc8f9366-12a7-4871-a1c4-80fb7998eb66_XX\d03df5dc-9c33-490a-8d6d-3675dc60d11f_1754282836_0_vehicles_export_2025-07-31.xls'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Presentation</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Presentation</BasePath>
+      <RelativePath>uploads/dc8f9366-12a7-4871-a1c4-80fb7998eb66_XX/d03df5dc-9c33-490a-8d6d-3675dc60d11f_1754282836_0_vehicles_export_2025-07-31.xls</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>lcwxz6b2rk</Fingerprint>
+      <Integrity>+9JZ13vxydmA/5sP4R+i6GQl2p+YpgkRhyGoI+MKzfw=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\dc8f9366-12a7-4871-a1c4-80fb7998eb66_XX\d03df5dc-9c33-490a-8d6d-3675dc60d11f_1754282836_0_vehicles_export_2025-07-31.xls'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\string\1373a51f-745f-47b3-943e-887443e28c0f_1754282836_0_vehicles_export_2025-07-31.xls'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Presentation</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Presentation</BasePath>
+      <RelativePath>uploads/string/1373a51f-745f-47b3-943e-887443e28c0f_1754282836_0_vehicles_export_2025-07-31.xls</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>lcwxz6b2rk</Fingerprint>
+      <Integrity>+9JZ13vxydmA/5sP4R+i6GQl2p+YpgkRhyGoI+MKzfw=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\string\1373a51f-745f-47b3-943e-887443e28c0f_1754282836_0_vehicles_export_2025-07-31.xls'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\string\c699e47c-c30c-4a6f-90fa-9fdbb90283ce_1754282836_0_vehicles_export_2025-07-31.xls'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Presentation</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Presentation</BasePath>
+      <RelativePath>uploads/string/c699e47c-c30c-4a6f-90fa-9fdbb90283ce_1754282836_0_vehicles_export_2025-07-31.xls</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>lcwxz6b2rk</Fingerprint>
+      <Integrity>+9JZ13vxydmA/5sP4R+i6GQl2p+YpgkRhyGoI+MKzfw=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\string\c699e47c-c30c-4a6f-90fa-9fdbb90283ce_1754282836_0_vehicles_export_2025-07-31.xls'))</OriginalItemSpec>
+    </StaticWebAsset>
+  </ItemGroup>
+</Project>

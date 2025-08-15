@@ -1,0 +1,252 @@
+{
+  "Version": 1,
+  "ManifestType": "Build",
+  "Endpoints": [
+    {
+      "Route": "uploads/dc8f9366-12a7-4871-a1c4-80fb7998eb66_XX/d03df5dc-9c33-490a-8d6d-3675dc60d11f_1754282836_0_vehicles_export_2025-07-31.lcwxz6b2rk.xls",
+      "AssetFile": "uploads/dc8f9366-12a7-4871-a1c4-80fb7998eb66_XX/d03df5dc-9c33-490a-8d6d-3675dc60d11f_1754282836_0_vehicles_export_2025-07-31.xls",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3104"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/vnd.ms-excel"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"+9JZ13vxydmA/5sP4R+i6GQl2p+YpgkRhyGoI+MKzfw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 15 Aug 2025 17:00:15 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "lcwxz6b2rk"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-+9JZ13vxydmA/5sP4R+i6GQl2p+YpgkRhyGoI+MKzfw="
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/dc8f9366-12a7-4871-a1c4-80fb7998eb66_XX/d03df5dc-9c33-490a-8d6d-3675dc60d11f_1754282836_0_vehicles_export_2025-07-31.xls"
+        }
+      ]
+    },
+    {
+      "Route": "uploads/dc8f9366-12a7-4871-a1c4-80fb7998eb66_XX/d03df5dc-9c33-490a-8d6d-3675dc60d11f_1754282836_0_vehicles_export_2025-07-31.xls",
+      "AssetFile": "uploads/dc8f9366-12a7-4871-a1c4-80fb7998eb66_XX/d03df5dc-9c33-490a-8d6d-3675dc60d11f_1754282836_0_vehicles_export_2025-07-31.xls",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3104"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/vnd.ms-excel"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"+9JZ13vxydmA/5sP4R+i6GQl2p+YpgkRhyGoI+MKzfw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 15 Aug 2025 17:00:15 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-+9JZ13vxydmA/5sP4R+i6GQl2p+YpgkRhyGoI+MKzfw="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/string/1373a51f-745f-47b3-943e-887443e28c0f_1754282836_0_vehicles_export_2025-07-31.lcwxz6b2rk.xls",
+      "AssetFile": "uploads/string/1373a51f-745f-47b3-943e-887443e28c0f_1754282836_0_vehicles_export_2025-07-31.xls",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3104"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/vnd.ms-excel"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"+9JZ13vxydmA/5sP4R+i6GQl2p+YpgkRhyGoI+MKzfw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 15 Aug 2025 16:43:22 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "lcwxz6b2rk"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-+9JZ13vxydmA/5sP4R+i6GQl2p+YpgkRhyGoI+MKzfw="
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/string/1373a51f-745f-47b3-943e-887443e28c0f_1754282836_0_vehicles_export_2025-07-31.xls"
+        }
+      ]
+    },
+    {
+      "Route": "uploads/string/1373a51f-745f-47b3-943e-887443e28c0f_1754282836_0_vehicles_export_2025-07-31.xls",
+      "AssetFile": "uploads/string/1373a51f-745f-47b3-943e-887443e28c0f_1754282836_0_vehicles_export_2025-07-31.xls",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3104"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/vnd.ms-excel"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"+9JZ13vxydmA/5sP4R+i6GQl2p+YpgkRhyGoI+MKzfw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 15 Aug 2025 16:43:22 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-+9JZ13vxydmA/5sP4R+i6GQl2p+YpgkRhyGoI+MKzfw="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/string/c699e47c-c30c-4a6f-90fa-9fdbb90283ce_1754282836_0_vehicles_export_2025-07-31.lcwxz6b2rk.xls",
+      "AssetFile": "uploads/string/c699e47c-c30c-4a6f-90fa-9fdbb90283ce_1754282836_0_vehicles_export_2025-07-31.xls",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3104"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/vnd.ms-excel"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"+9JZ13vxydmA/5sP4R+i6GQl2p+YpgkRhyGoI+MKzfw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 15 Aug 2025 16:27:55 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "lcwxz6b2rk"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-+9JZ13vxydmA/5sP4R+i6GQl2p+YpgkRhyGoI+MKzfw="
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/string/c699e47c-c30c-4a6f-90fa-9fdbb90283ce_1754282836_0_vehicles_export_2025-07-31.xls"
+        }
+      ]
+    },
+    {
+      "Route": "uploads/string/c699e47c-c30c-4a6f-90fa-9fdbb90283ce_1754282836_0_vehicles_export_2025-07-31.xls",
+      "AssetFile": "uploads/string/c699e47c-c30c-4a6f-90fa-9fdbb90283ce_1754282836_0_vehicles_export_2025-07-31.xls",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3104"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/vnd.ms-excel"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"+9JZ13vxydmA/5sP4R+i6GQl2p+YpgkRhyGoI+MKzfw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 15 Aug 2025 16:27:55 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-+9JZ13vxydmA/5sP4R+i6GQl2p+YpgkRhyGoI+MKzfw="
+        }
+      ]
+    }
+  ]
+}
