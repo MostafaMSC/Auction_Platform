@@ -30,6 +30,8 @@ namespace AuctionSystem.Application.Queries.Auctions
                 auction.EndAt,
                 auction.Status.ToString(),
                 auction.IsActive,
+                auction.WinningBidId,
+                auction.WinningBid?.SellerId,
                 auction.Bids.Select(b => new BidDto(
                     b.Id,
                     b.SellerId,

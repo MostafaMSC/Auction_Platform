@@ -24,30 +24,9 @@ public class AuctionsController : ControllerBase
                     if (!result.Success)
                         return BadRequest(new { result.Success, result.ErrorMessage });
 
-                    return Ok(new { result.Success, result.AuctionId });
+                    return Ok(new { result.Success, result.Auction });
                 }
 
-
-[HttpPost("{auctionId}/bids")]
-public async Task<IActionResult> PlaceBid(int auctionId, [FromBody] decimal bidAmount)
-{
-    // 1. Get the current logged-in user ID
-    var userId = User?.FindFirst(ClaimTypes.NameIdentifier)?.Value;
-    if (string.IsNullOrEmpty(userId))
-        return Unauthorized("User not logged in");
-
-    // 2. Create the command
-    var command = new PlaceBidCommand(auctionId, userId, bidAmount);
-
-    // 3. Send command via Mediator
-    var result = await _mediator.Send(command);
-
-    // 4. Return response
-    if (!result.Success)
-        return BadRequest(new { result.Success, result.ErrorMessage });
-
-    return Ok(new { result.Success, result.BidId });
-}
 
 
     [HttpGet]
@@ -84,6 +63,8 @@ public async Task<IActionResult> GetAuctionsByStatus(AuctionStatus status)
     a.EndAt,
     a.Status.ToString(),
     a.IsActive,
+    a.WinningBidId,
+    a.WinningBid?.SellerId,
     a.Bids.Select(b => new BidDto(b.Id, b.SellerId, b.Amount, b.CreatedAt)).ToList()
 ));
 

@@ -21,17 +21,27 @@ namespace AuctionSystem.Application.Queries.Auctions
     new AuctionDto(
         a.Id,
         a.ProjectId,
-        a.CurrentPrice.Amount,
         a.StartingPrice.Amount,
+        a.CurrentPrice.Amount,
         a.MinPrice.Amount,
         a.TargetPrice.Amount,
         a.StartAt,
         a.EndAt,
         a.Status.ToString(),
-        a.EndAt > DateTime.UtcNow,
-        new List<BidDto>() // or map bids if you need them
+        a.IsActive,
+        a.WinningBidId,
+        a.WinningBid?.SellerId,
+        a.Bids.Select(b =>
+            new BidDto(
+                b.Id,
+                b.SellerId,
+                b.Amount,
+                b.CreatedAt
+            )).ToList()
     )
 );
+
+
         }
     }
 }

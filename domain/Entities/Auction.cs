@@ -2,6 +2,7 @@ using AuctionSystem.Domain.Events.AuctionEvents;
 using AuctionSystem.Domain.ValueObjects;
 using AuctionSystem.Domain.Abstractions;
 using AuctionSystem.Domain.Exceptions;
+using AuctionSystem.Domain.Constants;
 
 namespace AuctionSystem.Domain.Entities
 {
@@ -78,30 +79,61 @@ namespace AuctionSystem.Domain.Entities
         }
 
         public void DecreasePrice()
+{
+    if (!IsActive)
+        throw new DomainException("Auction is not active");
+
+    // Calculate what the new price would be after the scheduled decrease
+    var scheduledNewPrice = Math.Max(CurrentPrice.Amount - PriceDropAmount.Amount, MinPrice.Amount);
+    
+    // Only decrease if the scheduled price is actually lower than current price
+    // (in case current price was already lowered by a bid)
+    if (scheduledNewPrice < CurrentPrice.Amount)
+    {
+        var oldPrice = CurrentPrice;
+        CurrentPrice = new Money(scheduledNewPrice);
+
+        RaiseDomainEvent(new AuctionPriceDecreasedEvent(Id, oldPrice, CurrentPrice));
+    }
+
+    // Auto-close if minimum price reached
+    if (CurrentPrice.Amount <= MinPrice.Amount)
+    {
+        CloseAuction();
+    }
+}
+
+public void CheckForAutoClose()
+{
+    if (Status != AuctionStatus.Active)
+        return;
+
+    // Close if auction expired
+    if (IsExpired)
+    {
+        CloseAuction();
+        return;
+    }
+
+    // Close if current price reaches or goes below the target price
+    if (CurrentPrice.Amount <= TargetPrice.Amount)
+    {
+        // Find the bid that hit the target price
+        var winningBid = Bids
+            .Where(b => b.Amount.Amount >= TargetPrice.Amount)
+            .OrderBy(b => b.CreatedAt) // choose the first bid to hit target
+            .FirstOrDefault();
+
+        if (winningBid != null)
         {
-            if (!IsActive)
-                throw new DomainException("Auction is not active");
-
-            var newPrice = Math.Max(CurrentPrice.Amount - PriceDropAmount.Amount, MinPrice.Amount);
-            var oldPrice = CurrentPrice;
-            CurrentPrice = new Money(newPrice);
-
-            RaiseDomainEvent(new AuctionPriceDecreasedEvent(Id, oldPrice, CurrentPrice));
-
-            // Auto-close if minimum price reached
-            if (CurrentPrice.Amount <= MinPrice.Amount)
-            {
-                CloseAuction();
-            }
+            WinningBidId = winningBid.Id;
+            WinningBid = winningBid;
         }
 
-        public void CheckForAutoClose()
-        {
-            if (IsExpired && Status == AuctionStatus.Active)
-            {
-                CloseAuction();
-            }
-        }
+        CloseAuction();
+    }
+}
+
 
         public Bid PlaceBid(string sellerId, Money bidAmount)
 {
@@ -114,14 +146,35 @@ namespace AuctionSystem.Domain.Entities
     if (bidAmount.Amount <= 0)
         throw new DomainException("Bid amount must be positive");
 
+    // Ensure bid doesn't go below minimum price
+    if (bidAmount.Amount < MinPrice.Amount)
+        throw new DomainException($"Bid amount cannot be less than minimum price of {MinPrice.Amount}");
+
     var bid = new Bid(Id, sellerId, bidAmount);
     Bids.Add(bid);
 
+    // Update current price to bid amount if it's lower than current price
+    var oldPrice = CurrentPrice;
+    CurrentPrice = bidAmount;
+
+    // Raise price decrease event if price actually decreased
+    if (bidAmount.Amount < oldPrice.Amount)
+    {
+        RaiseDomainEvent(new AuctionPriceDecreasedEvent(Id, oldPrice, CurrentPrice));
+    }
+
+    // Check if bid hits target price (bid should be >= target price to win)
+    if (bidAmount.Amount >= TargetPrice.Amount)
+    {
+        WinningBidId = bid.Id;
+        WinningBid = bid;
+        CloseAuction();
+    }
+
     RaiseDomainEvent(new BidPlacedEvent(Id, sellerId, bidAmount));
 
-    return bid; // <-- Return the newly created bid
+    return bid;
 }
-
 
         public void CloseAuction()
         {
@@ -133,7 +186,10 @@ namespace AuctionSystem.Domain.Entities
             {
                 EndAt = DateTime.UtcNow;
             }
-
+    if (Project != null)
+    {
+        Project.CompleteAuction(); 
+    }
             RaiseDomainEvent(new AuctionClosedEvent(Id, WinningBidId, WinningBid?.SellerId, CurrentPrice));
         }
 

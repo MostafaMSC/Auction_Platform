@@ -13,3 +13,4 @@ C:\Users\MSI\Desktop\AuctionSystem\Application\obj\Debug\net9.0\application.dll
 C:\Users\MSI\Desktop\AuctionSystem\Application\obj\Debug\net9.0\refint\application.dll
 C:\Users\MSI\Desktop\AuctionSystem\Application\obj\Debug\net9.0\application.pdb
 C:\Users\MSI\Desktop\AuctionSystem\Application\obj\Debug\net9.0\ref\application.dll
+C:\Users\MSI\Desktop\AuctionSystem\Application\obj\Debug\net9.0\application.sourcelink.json

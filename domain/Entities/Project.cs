@@ -42,14 +42,13 @@ namespace AuctionSystem.Domain.Entities
             Status = ProjectStatus.Draft;
         }
 
-        public bool CanEdit() => Status == ProjectStatus.Draft;
+        public bool CanEdit() => Status != ProjectStatus.InAuction || Status == ProjectStatus.Active ;
 
         public void Submit()
         {
-            if (Status != ProjectStatus.Draft)
-                throw new DomainException("Only draft projects can be submitted");
-
-            Status = ProjectStatus.Active; // Changed from Draft to Active
+            if (!CanEdit())
+                throw new DomainException("Project cannot be submitted its in Action now");
+            Status = ProjectStatus.Active; 
             RaiseDomainEvent(new ProjectSubmittedEvent(Id, ProjectOwnerId));
         }
 
@@ -105,7 +104,7 @@ namespace AuctionSystem.Domain.Entities
             if (Status != ProjectStatus.InAuction)
                 throw new DomainException("Project must be in auction to complete");
 
-            Status = ProjectStatus.Active;
+            Status = ProjectStatus.AuctionCompleted;
             RaiseDomainEvent(new ProjectAuctionCompletedEvent(Id));
         }
 

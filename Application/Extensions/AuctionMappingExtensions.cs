@@ -18,6 +18,8 @@ namespace AuctionSystem.Application.Extensions
                 auction.EndAt,
                 auction.Status.ToString(),
                 auction.IsActive,
+                auction.WinningBidId,
+                auction.WinningBid?.SellerId,
                 auction.Bids.Select(b => b.ToDto())
                            .OrderByDescending(b => b.CreatedAt)
                            .ToList()

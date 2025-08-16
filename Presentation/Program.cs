@@ -82,6 +82,8 @@ builder.Services.AddSwaggerGen(c =>
 });
 
 // Custom layers
+builder.Services.AddHostedService<AuctionBackgroundService>();
+
 builder.Services.AddInfrastructure(builder.Configuration);
 builder.Services.AddApplicationServices();
 

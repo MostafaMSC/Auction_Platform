@@ -5,7 +5,7 @@ namespace AuctionSystem.Application.Commands.Auctions
 {
     public record PlaceBidCommand(
         int AuctionId,
-        string SellerId,
+        string? SellerId,
         decimal BidAmount
     ) : IRequest<PlaceBidResult>;
 

@@ -12,9 +12,13 @@ namespace AuctionSystem.Application.Commands.Auctions
         decimal PriceDropAmount
     ) : IRequest<CreateAuctionResult>;
 
-    public record CreateAuctionResult(
-        bool Success,
-        int? AuctionId = null,
-        string? ErrorMessage = null
-    );
+public record CreateAuctionResult(
+    bool Success,
+    AuctionDto? Auction = null,
+    string? ErrorMessage = null
+)
+
+    {
+
+    }
 }

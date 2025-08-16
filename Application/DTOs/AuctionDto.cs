@@ -11,5 +11,7 @@ public record AuctionDto(
     DateTime? EndAt,
     string Status,
     bool IsActive,
+    int? WinningBidId,
+    string? WinningSellerId,
     List<BidDto> Bids
 );
