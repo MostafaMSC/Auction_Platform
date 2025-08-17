@@ -6,7 +6,7 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v9.0": {
-      "Infrastructure/1.0.0": {
+      "infrastructure/1.0.0": {
         "dependencies": {
           "Domain": "1.0.0",
           "Microsoft.AspNetCore.Authentication": "2.3.0",
@@ -21,7 +21,7 @@
           "application": "1.0.0"
         },
         "runtime": {
-          "Infrastructure.dll": {}
+          "infrastructure.dll": {}
         }
       },
       "Azure.Core/1.38.0": {
@@ -1483,7 +1483,7 @@
     }
   },
   "libraries": {
-    "Infrastructure/1.0.0": {
+    "infrastructure/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

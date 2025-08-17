@@ -20,6 +20,11 @@ namespace AuctionSystem.Presentation.Controllers
             _mediator = mediator;
         }
 
+        /// <summary>
+        /// تسجيل مستخدم جديد في النظام.
+        /// </summary>
+        /// <param name="command">بيانات التسجيل (اسم المستخدم، البريد، كلمة المرور، ...)</param>
+        /// <returns>نتيجة النجاح أو الخطأ</returns>
         [HttpPost("register")]
         public async Task<IActionResult> Register([FromBody] RegisterUserCommand command)
         {
@@ -27,15 +32,21 @@ namespace AuctionSystem.Presentation.Controllers
             return result.Success ? Ok(result) : BadRequest(result);
         }
 
+        /// <summary>
+        /// تسجيل الدخول (توليد Access Token + Refresh Token).
+        /// </summary>
+        /// <param name="command">بيانات تسجيل الدخول (Email / Username و Password)</param>
+        /// <returns>توكنات JWT وبيانات المستخدم</returns>
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] LoginUserCommand command)
         {
             var result = await _mediator.Send(command);
-            Console.WriteLine($"Login attempt: {result.Success}");
-            if (!result.Success) return Unauthorized(new { result.Success, result.ErrorMessage });
+            if (!result.Success)
+                return Unauthorized(new { result.Success, result.ErrorMessage });
 
-            SetRefreshTokenCookie(result.RefreshToken);
-            return Ok(new SecureLoginResult
+            SetRefreshTokenCookie(result.RefreshToken!);
+
+            return Ok(new LoginUserResult
             {
                 Success = true,
                 AccessToken = result.AccessToken,
@@ -43,28 +54,30 @@ namespace AuctionSystem.Presentation.Controllers
             });
         }
 
+        /// <summary>
+        /// تسجيل الخروج وإزالة Refresh Token من الكوكيز.
+        /// </summary>
         [HttpPost("logout")]
         public async Task<IActionResult> Logout()
         {
-            // Try to get user ID from token first, if not available, allow logout anyway
             var userId = GetCurrentUserId();
-
-            // Get refresh token from cookie
             Request.Cookies.TryGetValue("refreshToken", out var refreshToken);
 
-            // If we have both userId and refreshToken, try to revoke it
             if (!string.IsNullOrEmpty(userId) && !string.IsNullOrEmpty(refreshToken))
             {
                 var command = new LogoutUserCommand(userId, refreshToken);
-                await _mediator.Send(command); // Don't block logout if this fails
+                await _mediator.Send(command);
             }
 
-            // Always delete the cookie and return success
             DeleteRefreshTokenCookie();
-            return Ok(new LogoutResult { Success = true, Message = "Logged out successfully" });
+            return Ok(new LogoutUserResult { Success = true, Message = "Logged out successfully" });
         }
 
+        /// <summary>
+        /// تجديد الـ Access Token باستخدام Refresh Token من الكوكيز (يتطلب صلاحية Admin).
+        /// </summary>
         [HttpPost("refresh-token")]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> RefreshToken()
         {
             if (!Request.Cookies.TryGetValue("refreshToken", out var refreshToken))
@@ -79,16 +92,22 @@ namespace AuctionSystem.Presentation.Controllers
                 return Unauthorized(new { result.Success, result.ErrorMessage });
             }
 
-            SetRefreshTokenCookie(result.NewRefreshToken);
-            return Ok(new RefreshTokenResult { Success = true, AccessToken = result.AccessToken });
+            SetRefreshTokenCookie(result.NewRefreshToken!);
+
+            return Ok(new RefreshTokenCommandResult
+            {
+                Success = true,
+                AccessToken = result.AccessToken
+            });
         }
 
-        
+        // =============== Helpers ===============
+
         private string? GetCurrentUserId()
         {
-            return User.FindFirstValue(ClaimTypes.NameIdentifier) ??
-                User.FindFirstValue("sub") ??
-                User.FindFirstValue("uid");
+            return User.FindFirstValue(ClaimTypes.NameIdentifier)
+                ?? User.FindFirstValue("sub")
+                ?? User.FindFirstValue("uid");
         }
 
         private void SetRefreshTokenCookie(string token)

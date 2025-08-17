@@ -70,5 +70,17 @@ namespace AuctionSystem.Infrastructure.Repositories
             _context.Bids.Remove(bid);
             return await _context.SaveChangesAsync() > 0;
         }
+        public async Task<IEnumerable<Bid>> GetBidsBySellerIdAsync(string sellerId)
+{
+    if (string.IsNullOrEmpty(sellerId))
+        return new List<Bid>();
+
+    return await _context.Bids
+        .Where(b => b.SellerId == sellerId)
+        .Include(b => b.Auction)
+        .Include(b => b.Seller)
+        .ToListAsync();
+}
+
     }
 }

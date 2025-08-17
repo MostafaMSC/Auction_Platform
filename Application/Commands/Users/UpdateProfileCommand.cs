@@ -6,9 +6,9 @@ using MediatR;
 namespace AuctionSystem.Application.Commands.Users
 {
     public record UpdateProfileCommand(
-        string UserId,
-        string UserName,
-        string Email,
+        string? UserId,
+        string? UserName,
+        string? Email,
         AccountType AccountType
     ) : IRequest<UpdateProfileResult>;
     

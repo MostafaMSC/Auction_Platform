@@ -31,7 +31,9 @@ namespace AuctionSystem.Infrastructure.Services
                 new Claim(ClaimTypes.NameIdentifier, user.Id),
                 new Claim(ClaimTypes.Name, user.UserName),
                 new Claim(ClaimTypes.Email, user.Email),
-                new Claim(ClaimTypes.Role, user.AccountType.ToString()) // Default role
+                new Claim(ClaimTypes.Role, user.AccountType.ToString()), // Default role
+                new Claim("VerificationStatus", user.VerificationStatus.ToString()) // <-- Add this
+
             };
 
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["JwtSettings:Key"]));

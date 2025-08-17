@@ -1,0 +1,289 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Presentation</name>
+    </assembly>
+    <members>
+        <member name="T:AuctionSystem.Presentation.Controller.AccessController">
+            <summary>
+            واجهة الوصول الخاصة بالأدوار والصلاحيات
+            </summary>
+        </member>
+        <member name="M:AuctionSystem.Presentation.Controller.AccessController.#ctor(RoleService)">
+            <summary>
+            منشئ الـ Controller
+            </summary>
+            <param name="roleService">خدمة الأدوار والصلاحيات</param>
+        </member>
+        <member name="M:AuctionSystem.Presentation.Controller.AccessController.GetRoles">
+            <summary>
+            الحصول على جميع الأدوار والصلاحيات
+            </summary>
+            <remarks>
+            </remarks>
+        </member>
+        <member name="M:AuctionSystem.Presentation.Controllers.AuthController.Register(AuctionSystem.Application.Commands.Auth.RegisterUserCommand)">
+            <summary>
+            تسجيل مستخدم جديد في النظام.
+            </summary>
+            <param name="command">بيانات التسجيل (اسم المستخدم، البريد، كلمة المرور، ...)</param>
+            <returns>نتيجة النجاح أو الخطأ</returns>
+        </member>
+        <member name="M:AuctionSystem.Presentation.Controllers.AuthController.Login(AuctionSystem.Application.Commands.Auth.LoginUserCommand)">
+            <summary>
+            تسجيل الدخول (توليد Access Token + Refresh Token).
+            </summary>
+            <param name="command">بيانات تسجيل الدخول (Email / Username و Password)</param>
+            <returns>توكنات JWT وبيانات المستخدم</returns>
+        </member>
+        <member name="M:AuctionSystem.Presentation.Controllers.AuthController.Logout">
+            <summary>
+            تسجيل الخروج وإزالة Refresh Token من الكوكيز.
+            </summary>
+        </member>
+        <member name="M:AuctionSystem.Presentation.Controllers.AuthController.RefreshToken">
+            <summary>
+            تجديد الـ Access Token باستخدام Refresh Token من الكوكيز (يتطلب صلاحية Admin).
+            </summary>
+        </member>
+        <member name="T:AuctionSystem.Presentation.Controllers.BidController">
+            <summary>
+            Controller لإدارة العروض (Bids) في المزادات
+            </summary>
+        </member>
+        <member name="M:AuctionSystem.Presentation.Controllers.BidController.PlaceBid(System.Int32,AuctionSystem.Presentation.Controllers.BidController.PlaceBidRequest)">
+            <summary>
+            تقديم عرض (Bid) على مزاد معين
+            </summary>
+            <param name="auctionId">معرف المزاد</param>
+            <param name="request">معلومات العرض: SellerId اختياري و Amount إلزامي</param>
+            <returns>نتيجة تقديم العرض</returns>
+        </member>
+        <member name="M:AuctionSystem.Presentation.Controllers.BidController.ChooseWinner(System.Int32,AuctionSystem.Presentation.Controllers.BidController.ChooseWinnerRequest)">
+            <summary>
+            اختيار الفائز لمزاد معين
+            </summary>
+            <param name="auctionId">معرف المزاد</param>
+            <param name="request">معرف العرض الفائز</param>
+            <returns>نتيجة العملية</returns>
+        </member>
+        <member name="M:AuctionSystem.Presentation.Controllers.BidController.GetBids(System.Int32)">
+            <summary>
+            الحصول على جميع العروض لمزاد معين
+            </summary>
+            <param name="auctionId">معرف المزاد</param>
+            <returns>قائمة العروض</returns>
+        </member>
+        <member name="M:AuctionSystem.Presentation.Controllers.BidController.GetMyBids">
+            <summary>
+            الحصول على جميع العروض الخاصة بالمستخدم الحالي
+            </summary>
+            <returns>قائمة العروض الخاصة بالمستخدم</returns>
+        </member>
+        <member name="T:AuctionSystem.Presentation.Controllers.BidController.PlaceBidRequest">
+            <summary>
+            نموذج تقديم العرض
+            </summary>
+        </member>
+        <member name="P:AuctionSystem.Presentation.Controllers.BidController.PlaceBidRequest.SellerId">
+            <summary>
+            معرف البائع (اختياري، إذا لم يُذكر يستخدم المستخدم الحالي)
+            </summary>
+        </member>
+        <member name="P:AuctionSystem.Presentation.Controllers.BidController.PlaceBidRequest.Amount">
+            <summary>
+            مبلغ العرض
+            </summary>
+        </member>
+        <member name="T:AuctionSystem.Presentation.Controllers.BidController.ChooseWinnerRequest">
+            <summary>
+            نموذج اختيار الفائز
+            </summary>
+        </member>
+        <member name="P:AuctionSystem.Presentation.Controllers.BidController.ChooseWinnerRequest.BidId">
+            <summary>
+            معرف العرض الفائز
+            </summary>
+        </member>
+        <member name="T:AuctionSystem.Presentation.Controllers.CategoriesController">
+            <summary>
+            Controller لإدارة التصنيفات (Categories)
+            </summary>
+        </member>
+        <member name="M:AuctionSystem.Presentation.Controllers.CategoriesController.Create(AuctionSystem.Application.Commands.Category.CreateCategoryCommand)">
+            <summary>
+            إنشاء تصنيف جديد
+            </summary>
+            <param name="command">بيانات التصنيف الجديد</param>
+            <returns>معرف التصنيف الذي تم إنشاؤه</returns>
+        </member>
+        <member name="M:AuctionSystem.Presentation.Controllers.CategoriesController.GetAll">
+            <summary>
+            استرجاع كل التصنيفات
+            </summary>
+            <returns>قائمة بكل التصنيفات</returns>
+        </member>
+        <member name="M:AuctionSystem.Presentation.Controllers.CategoriesController.Delete(System.Int32)">
+            <summary>
+            حذف تصنيف محدد
+            </summary>
+            <param name="id">معرف التصنيف الذي سيتم حذفه</param>
+            <returns>نجاح العملية أو NotFound إذا لم يكن موجود</returns>
+        </member>
+        <member name="T:AuctionSystem.Presentation.Controllers.ProjectsController">
+            <summary>
+            Controller لإدارة المشاريع (Projects)
+            </summary>
+        </member>
+        <member name="M:AuctionSystem.Presentation.Controllers.ProjectsController.GetAll">
+            <summary>
+            استرجاع كل المشاريع
+            </summary>
+            <returns>قائمة بكل المشاريع</returns>
+        </member>
+        <member name="M:AuctionSystem.Presentation.Controllers.ProjectsController.GetById(System.Int32)">
+            <summary>
+            استرجاع مشروع حسب معرفه
+            </summary>
+            <param name="id">معرف المشروع</param>
+            <returns>تفاصيل المشروع أو NotFound إذا لم يكن موجود</returns>
+        </member>
+        <member name="M:AuctionSystem.Presentation.Controllers.ProjectsController.Create(AuctionSystem.Application.Commands.Projects.CreateProjectCommand)">
+            <summary>
+            إنشاء مشروع جديد
+            </summary>
+            <param name="cmd">بيانات المشروع الجديد</param>
+            <returns>معرف المشروع الذي تم إنشاؤه</returns>
+        </member>
+        <member name="M:AuctionSystem.Presentation.Controllers.ProjectsController.GetByState(AuctionSystem.Domain.Constants.ProjectStatus)">
+            <summary>
+            استرجاع المشاريع حسب الحالة
+            </summary>
+            <param name="state">حالة المشروع (مثل Pending, Active, Completed)</param>
+            <returns>قائمة المشاريع المطابقة للحالة</returns>
+        </member>
+        <member name="M:AuctionSystem.Presentation.Controllers.ProjectsController.DeleteProject(System.Int32)">
+            <summary>
+            حذف مشروع
+            </summary>
+            <param name="id">معرف المشروع</param>
+            <returns>نتيجة الحذف أو رسالة خطأ إذا لم يكن موجود</returns>
+        </member>
+        <member name="M:AuctionSystem.Presentation.Controllers.ProjectsController.SubmitProject(System.Int32)">
+            <summary>
+            تقديم المشروع (Submit)
+            </summary>
+            <param name="id">معرف المشروع</param>
+            <returns>نتيجة تقديم المشروع أو رسالة خطأ</returns>
+        </member>
+        <member name="T:AuctionSystem.Presentation.Controllers.UsersController">
+            <summary>
+            Controller لإدارة المستخدمين وحساباتهم
+            </summary>
+        </member>
+        <member name="M:AuctionSystem.Presentation.Controllers.UsersController.GetProfile">
+            <summary>
+            استرجاع ملف المستخدم الحالي (Profile)
+            </summary>
+            <returns>معلومات المستخدم أو Unauthorized إذا لم يتم تسجيل الدخول</returns>
+        </member>
+        <member name="M:AuctionSystem.Presentation.Controllers.UsersController.UpdateProfile(AuctionSystem.Application.Commands.Users.UpdateProfileCommand)">
+            <summary>
+            تحديث معلومات المستخدم الحالي
+            </summary>
+            <param name="command">بيانات التحديث</param>
+            <returns>النتيجة بعد التحديث أو خطأ</returns>
+        </member>
+        <member name="M:AuctionSystem.Presentation.Controllers.UsersController.ChangePassword(AuctionSystem.Application.Commands.Auth.ChangePasswordCommand)">
+            <summary>
+            تغيير كلمة مرور المستخدم الحالي
+            </summary>
+            <param name="command">بيانات تغيير كلمة المرور</param>
+            <returns>نتيجة العملية أو خطأ</returns>
+        </member>
+        <member name="M:AuctionSystem.Presentation.Controllers.UsersController.VerifyId(AuctionSystem.Application.Commands.Users.VerifyUserCommand)">
+            <summary>
+            التحقق من هوية المستخدم عن طريق رفع مستند
+            </summary>
+            <param name="command">بيانات التحقق</param>
+            <returns>نتيجة التحقق أو خطأ</returns>
+        </member>
+        <member name="M:AuctionSystem.Presentation.Controllers.UsersController.GetVerificationStatus">
+            <summary>
+            استرجاع حالة التحقق من الهوية للمستخدم الحالي
+            </summary>
+            <returns>حالة التحقق من الهوية</returns>
+        </member>
+        <member name="M:AuctionSystem.Presentation.Controllers.UsersController.GetAllUsers">
+            <summary>
+            استرجاع كل المستخدمين (للمسؤول فقط)
+            </summary>
+            <returns>قائمة المستخدمين أو NotFound إذا لا يوجد</returns>
+        </member>
+        <member name="M:AuctionSystem.Presentation.Controllers.UsersController.DeleteUser(System.String)">
+            <summary>
+            حذف مستخدم حسب المعرف (للمسؤول فقط)
+            </summary>
+            <param name="id">معرف المستخدم</param>
+            <returns>نجاح العملية أو NotFound إذا لم يكن موجود</returns>
+        </member>
+        <member name="T:AuctionsController">
+            <summary>
+            Controller لإدارة المزادات (Auctions)
+            </summary>
+        </member>
+        <member name="M:AuctionsController.CreateAuction(AuctionSystem.Application.Commands.Auctions.CreateAuctionCommand)">
+            <summary>
+            إنشاء مزاد جديد
+            </summary>
+            <param name="command">بيانات المزاد الجديد</param>
+            <returns>نتيجة العملية والمزاد الذي تم إنشاؤه</returns>
+        </member>
+        <member name="M:AuctionsController.GetAuctionById(System.Int32)">
+            <summary>
+            عرض تفاصيل مزاد
+            </summary>
+            <returns>تفاصيل المزاد</returns>
+        </member>
+        <member name="M:AuctionsController.StartAuction(System.Int32)">
+            <summary>
+            بدء مزاد موجود
+            </summary>
+            <param name="auctionId">معرف المزاد الذي سيتم البدء به</param>
+            <returns>نتيجة العملية</returns>
+        </member>
+        <member name="M:AuctionsController.UpdateAuction(System.Int32,UpdateAuctionDto)">
+            <summary>
+            تحديث مزاد موجود
+            </summary>
+        </member>
+        <member name="M:AuctionsController.GetAuctionsByStatus(AuctionStatus)">
+            <summary>
+            استرجاع المزادات حسب الحالة
+            </summary>
+            <param name="status">حالة المزاد (مثل Pending, Active, Completed)</param>
+            <returns>قائمة المزادات المطابقة للحالة</returns>
+        </member>
+        <member name="M:NotificationsController.CreateNotification(AuctionSystem.Application.Commands.Notification.CreateNotificationCommand)">
+            <summary>
+            إنشاء إشعار جديد للمستخدم.
+            </summary>
+            <param name="command">يحتوي على UserId و Message للإشعار</param>
+            <returns>معرّف الإشعار الذي تم إنشاءه</returns>
+        </member>
+        <member name="M:NotificationsController.GetUserNotifications(System.Boolean)">
+            <summary>
+            الحصول على جميع الإشعارات الخاصة بالمستخدم الحالي.
+            </summary>
+            <param name="unreadOnly">إذا true يتم جلب الإشعارات غير المقروءة فقط</param>
+            <returns>قائمة من الإشعارات</returns>
+        </member>
+        <member name="M:NotificationsController.MarkAsRead(System.Int32)">
+            <summary>
+            تعليم إشعار معين كمقروء.
+            </summary>
+            <param name="notificationId">معرّف الإشعار الذي سيتم تعليمه كمقروء</param>
+            <returns>Success = true إذا تمت العملية بنجاح</returns>
+        </member>
+    </members>
+</doc>

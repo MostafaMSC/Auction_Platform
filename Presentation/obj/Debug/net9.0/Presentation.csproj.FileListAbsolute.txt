@@ -183,5 +183,7 @@ C:\Users\MSI\Desktop\AuctionSystem\presentation\obj\Debug\net9.0\presentation.pd
 C:\Users\MSI\Desktop\AuctionSystem\Presentation\obj\Debug\net9.0\presentation.genruntimeconfig.cache
 C:\Users\MSI\Desktop\AuctionSystem\Presentation\obj\Debug\net9.0\ref\presentation.dll
 C:\Users\MSI\Desktop\AuctionSystem\presentation\bin\Debug\net9.0\Presentation.staticwebassets.runtime.json
-C:\Users\MSI\Desktop\AuctionSystem\presentation\obj\Debug\net9.0\Presenta.BC777DBE.Up2Date
 C:\Users\MSI\Desktop\AuctionSystem\presentation\obj\Debug\net9.0\Presentation.sourcelink.json
+C:\Users\MSI\Desktop\AuctionSystem\presentation\bin\Debug\net9.0\presentation.xml
+C:\Users\MSI\Desktop\AuctionSystem\presentation\obj\Debug\net9.0\presentation.xml
+C:\Users\MSI\Desktop\AuctionSystem\presentation\obj\Debug\net9.0\Presenta.BC777DBE.Up2Date

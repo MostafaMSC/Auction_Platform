@@ -23,6 +23,8 @@ namespace AuctionSystem.Domain.Repositories
         Task<bool> DeleteBidAsync(int id);
 
         // ملاحظة: إنشاء العروض يجب أن يتم عبر Auction.PlaceBid() وليس مباشرة
-        Task PlaceBidAsync(Bid bid); 
+        // Task PlaceBidAsync(Bid bid);
+        Task<IEnumerable<Bid>> GetBidsBySellerIdAsync(string sellerId);
+
     }
 }

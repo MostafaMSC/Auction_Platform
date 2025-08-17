@@ -78,9 +78,15 @@ builder.Services.AddSwaggerGen(c =>
             Array.Empty<string>()
         }
     });
-    
+    var xmlFile = $"{System.Reflection.Assembly.GetExecutingAssembly().GetName().Name}.xml";
+    var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
+    c.IncludeXmlComments(xmlPath);
 });
-
+builder.Services.AddAuthorization(options =>
+{
+    options.AddPolicy("VerifiedUserOnly", policy =>
+        policy.RequireClaim("VerificationStatus", "Approved"));
+});
 // Custom layers
 builder.Services.AddHostedService<AuctionBackgroundService>();
 
@@ -177,6 +183,7 @@ app.Use(async (context, next) =>
     }
     await next();
 });
+app.UseMiddleware<AuctionAccessMiddleware>();
 
 app.UseHttpsRedirection();
 

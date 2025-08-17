@@ -1,6 +1,6 @@
-using AuctionSystem.Domain.Entities;
-using AuctionSystem.Domain.Repositories;
 using Microsoft.EntityFrameworkCore;
+
+using AuctionSystem.Domain.Entities;
 
 namespace AuctionSystem.Infrastructure.Repositories
 {
@@ -13,62 +13,39 @@ namespace AuctionSystem.Infrastructure.Repositories
             _context = context;
         }
 
-        public async Task<IEnumerable<Notification>> GetAllAsync()
+        public async Task<Notification> GetByIdAsync(int id)
+        {
+            return await _context.Notifications.FindAsync(id);
+        }
+
+        public async Task<IEnumerable<Notification>> GetByUserIdAsync(string userId)
         {
             return await _context.Notifications
-                .Include(n => n.User)
+                .Where(n => n.UserId == userId)
+                .OrderByDescending(n => n.CreatedAt)
                 .ToListAsync();
         }
 
-        public async Task<Notification?> GetByIdAsync(int id)
+        public async Task<IEnumerable<Notification>> GetUnreadByUserIdAsync(string userId)
         {
             return await _context.Notifications
-                .Include(n => n.User)
-                .FirstOrDefaultAsync(n => n.Id == id);
+                .Where(n => n.UserId == userId && !n.IsRead)
+                .OrderByDescending(n => n.CreatedAt)
+                .ToListAsync();
         }
 
-        public async Task CreateAsync(Notification notification)
+        public async Task AddAsync(Notification notification)
         {
             await _context.Notifications.AddAsync(notification);
             await _context.SaveChangesAsync();
         }
 
-        public async Task<bool> UpdateAsync(Notification notification)
+        public async Task UpdateAsync(Notification notification)
         {
             _context.Notifications.Update(notification);
-            return await _context.SaveChangesAsync() > 0;
+            await _context.SaveChangesAsync();
         }
 
-        public async Task<bool> DeleteAsync(int id)
-        {
-            var notification = await GetByIdAsync(id);
-            if (notification == null) return false;
 
-            _context.Notifications.Remove(notification);
-            return await _context.SaveChangesAsync() > 0;
-        }
-
-        public async Task<IEnumerable<Notification>> GetByUserIdAsync(int userId)
-        {
-            var notifications = _context.Notifications
-                .Where(n => n.UserId == userId);
-            return await notifications.ToListAsync();
-        }
-
-        public async Task<IEnumerable<Notification>> GetUnreadNotificationsAsync(int userId)
-        {
-            var notifications = _context.Notifications
-                .Where(n => n.UserId == userId && !n.IsRead);
-            return await notifications.ToListAsync();
-        }
-
-        public async Task MarkAsReadAsync(int notificationId)
-        {
-            var notification = await GetByIdAsync(notificationId);
-            if (notification == null) return;
-
-            notification.IsRead = true;
-            await UpdateAsync(notification);
-        }
     }
 }

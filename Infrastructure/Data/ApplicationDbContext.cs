@@ -17,7 +17,7 @@ namespace AuctionSystem.Infrastructure
         public DbSet<Category> Categories { get; set; }
         public DbSet<Notification> Notifications { get; set; }
         public DbSet<VerificationDoc> VerificationDocs { get; set; }
-    public DbSet<RefreshToken> RefreshTokens { get; set; } = default!; // ← هذا مطلوب
+        public DbSet<RefreshToken> RefreshTokens { get; set; } = default!; // ← هذا مطلوب
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
@@ -89,6 +89,9 @@ namespace AuctionSystem.Infrastructure
                     amount => new Money(amount, "IQD"))
                 .HasColumnName("TargetPriceAmount")
                 .HasPrecision(18, 2);
+builder.Entity<Auction>()
+    .Property(a => a.PriceDropInterval)
+    .HasColumnType("time"); // store as SQL Server time
 
             builder.Entity<Auction>()
                 .Property(a => a.PriceDropAmount)
@@ -105,19 +108,19 @@ namespace AuctionSystem.Infrastructure
                     amount => new Money(amount, "IQD"))
                 .HasColumnName("BidAmount")
                 .HasPrecision(18, 2);
-builder.Entity<RefreshToken>(entity =>
-            {
-                entity.HasKey(rt => rt.Id);
-                entity.Property(rt => rt.Token).IsRequired().HasMaxLength(500);
-                entity.Property(rt => rt.UserId).IsRequired();
-                entity.HasIndex(rt => rt.Token).IsUnique();
-                entity.HasIndex(rt => new { rt.UserId, rt.Token });
-                
-                entity.HasOne<User>()
-                    .WithMany()
-                    .HasForeignKey(rt => rt.UserId)
-                    .OnDelete(DeleteBehavior.Cascade);
-            });
+            builder.Entity<RefreshToken>(entity =>
+                        {
+                            entity.HasKey(rt => rt.Id);
+                            entity.Property(rt => rt.Token).IsRequired().HasMaxLength(500);
+                            entity.Property(rt => rt.UserId).IsRequired();
+                            entity.HasIndex(rt => rt.Token).IsUnique();
+                            entity.HasIndex(rt => new { rt.UserId, rt.Token });
+
+                            entity.HasOne<User>()
+                                .WithMany()
+                                .HasForeignKey(rt => rt.UserId)
+                                .OnDelete(DeleteBehavior.Cascade);
+                        });
         }
         private void ConfigureBids(ModelBuilder builder)
         {
@@ -140,17 +143,17 @@ builder.Entity<RefreshToken>(entity =>
 
 
         }
-        
-                private void ConfigureAuction(ModelBuilder builder)
+
+        private void ConfigureAuction(ModelBuilder builder)
         {
-builder.Entity<Auction>()
-    .HasOne(a => a.Project)
-    .WithMany(p => p.Auctions)
-    .HasForeignKey(a => a.ProjectId);
+            builder.Entity<Auction>()
+                .HasOne(a => a.Project)
+                .WithMany(p => p.Auctions)
+                .HasForeignKey(a => a.ProjectId);
 
-
-
+            
         }
+        
 
     }
 }

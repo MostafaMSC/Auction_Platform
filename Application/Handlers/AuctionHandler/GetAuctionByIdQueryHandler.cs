@@ -22,8 +22,9 @@ namespace AuctionSystem.Application.Queries.Auctions
             return new AuctionDto(
                 auction.Id,
                 auction.ProjectId,
+                                auction.StartingPrice.Amount,
+
                 auction.CurrentPrice.Amount,
-                auction.StartingPrice.Amount,
                 auction.MinPrice.Amount,
                 auction.TargetPrice.Amount,
                 auction.StartAt,

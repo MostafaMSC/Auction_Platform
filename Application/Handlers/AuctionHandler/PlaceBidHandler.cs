@@ -13,7 +13,7 @@ namespace AuctionSystem.Application.Handlers.AuctionHandlers
     {
         private readonly IAuctionRepository _auctionRepository;
         private readonly IUserRepository _userRepository;
-private readonly IHttpContextAccessor _httpContextAccessor;
+        private readonly IHttpContextAccessor _httpContextAccessor;
 
         public PlaceBidCommandHandler(
             IAuctionRepository auctionRepository,
@@ -26,8 +26,8 @@ private readonly IHttpContextAccessor _httpContextAccessor;
         }
 
         public async Task<PlaceBidResult> Handle(PlaceBidCommand request, CancellationToken cancellationToken)
-{
-    try
+        {
+         try
     {
         // 1. Get auction
         var auction = await _auctionRepository.GetByIdAsync(request.AuctionId);
@@ -35,13 +35,13 @@ private readonly IHttpContextAccessor _httpContextAccessor;
             return new PlaceBidResult(false, "Auction not found");
 
         // 2. Determine seller ID
-string sellerId = request.SellerId;
-if (string.IsNullOrEmpty(sellerId))
-{
-    sellerId = _httpContextAccessor.HttpContext?.User?.FindFirst(ClaimTypes.NameIdentifier)?.Value;
-    if (string.IsNullOrEmpty(sellerId))
-        return new PlaceBidResult(false, "Seller not specified and no user logged in");
-}
+            string sellerId = request.SellerId;
+            if (string.IsNullOrEmpty(sellerId))
+            {
+                sellerId = _httpContextAccessor.HttpContext?.User?.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+                if (string.IsNullOrEmpty(sellerId))
+                    return new PlaceBidResult(false, "Seller not specified and no user logged in");
+            }
 
 
         // 3. Verify seller exists

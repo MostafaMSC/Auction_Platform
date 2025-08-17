@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "HUZ+RoG45wcN82pTEXTL+qSqrKxp9X6iO8QGb6PL2Q8=",
+  "Hash": "cQ9PQ2Lrur1HUTqRcNGjV10CQmQEA8aPb2JuExQ2Rtg=",
   "Source": "Presentation",
   "BasePath": "_content/Presentation",
   "Mode": "Default",
@@ -16,6 +16,90 @@
     }
   ],
   "Assets": [
+    {
+      "Identity": "C:\\Users\\MSI\\Desktop\\AuctionSystem\\presentation\\wwwroot\\uploads\\1009a068-aeba-4a81-acb9-70288eae50b7_string\\542ea465-321a-418a-8e69-cf59d91432a3_Portfolio .doc",
+      "SourceId": "Presentation",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\MSI\\Desktop\\AuctionSystem\\presentation\\wwwroot\\",
+      "BasePath": "_content/Presentation",
+      "RelativePath": "uploads/1009a068-aeba-4a81-acb9-70288eae50b7_string/542ea465-321a-418a-8e69-cf59d91432a3_Portfolio #[.{fingerprint}]?.doc",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "91utgkbxyx",
+      "Integrity": "s/L5j2XtQjab6cB4B8MzE4ATBFKLtQI6HYOORYoWRFI=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\1009a068-aeba-4a81-acb9-70288eae50b7_string\\542ea465-321a-418a-8e69-cf59d91432a3_Portfolio .doc"
+    },
+    {
+      "Identity": "C:\\Users\\MSI\\Desktop\\AuctionSystem\\presentation\\wwwroot\\uploads\\303dade5-2267-454d-9002-b01cae64481f_string\\5e66548c-9b70-4965-8aac-a2082488e765_Portfolio .doc",
+      "SourceId": "Presentation",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\MSI\\Desktop\\AuctionSystem\\presentation\\wwwroot\\",
+      "BasePath": "_content/Presentation",
+      "RelativePath": "uploads/303dade5-2267-454d-9002-b01cae64481f_string/5e66548c-9b70-4965-8aac-a2082488e765_Portfolio #[.{fingerprint}]?.doc",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "91utgkbxyx",
+      "Integrity": "s/L5j2XtQjab6cB4B8MzE4ATBFKLtQI6HYOORYoWRFI=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\303dade5-2267-454d-9002-b01cae64481f_string\\5e66548c-9b70-4965-8aac-a2082488e765_Portfolio .doc"
+    },
+    {
+      "Identity": "C:\\Users\\MSI\\Desktop\\AuctionSystem\\presentation\\wwwroot\\uploads\\85e04084-4d09-449a-a21b-402586222a2f_string\\38130515-687f-45a0-a202-da5fbb4473b9_Portfolio .doc",
+      "SourceId": "Presentation",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\MSI\\Desktop\\AuctionSystem\\presentation\\wwwroot\\",
+      "BasePath": "_content/Presentation",
+      "RelativePath": "uploads/85e04084-4d09-449a-a21b-402586222a2f_string/38130515-687f-45a0-a202-da5fbb4473b9_Portfolio #[.{fingerprint}]?.doc",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "91utgkbxyx",
+      "Integrity": "s/L5j2XtQjab6cB4B8MzE4ATBFKLtQI6HYOORYoWRFI=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\85e04084-4d09-449a-a21b-402586222a2f_string\\38130515-687f-45a0-a202-da5fbb4473b9_Portfolio .doc"
+    },
+    {
+      "Identity": "C:\\Users\\MSI\\Desktop\\AuctionSystem\\presentation\\wwwroot\\uploads\\9a79eeae-3aad-4b0a-92aa-9dcf0ee2300c_string\\417c78b3-1cc7-41bc-bca1-8eb71749a310_Portfolio .doc",
+      "SourceId": "Presentation",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\MSI\\Desktop\\AuctionSystem\\presentation\\wwwroot\\",
+      "BasePath": "_content/Presentation",
+      "RelativePath": "uploads/9a79eeae-3aad-4b0a-92aa-9dcf0ee2300c_string/417c78b3-1cc7-41bc-bca1-8eb71749a310_Portfolio #[.{fingerprint}]?.doc",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "91utgkbxyx",
+      "Integrity": "s/L5j2XtQjab6cB4B8MzE4ATBFKLtQI6HYOORYoWRFI=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\9a79eeae-3aad-4b0a-92aa-9dcf0ee2300c_string\\417c78b3-1cc7-41bc-bca1-8eb71749a310_Portfolio .doc"
+    },
     {
       "Identity": "C:\\Users\\MSI\\Desktop\\AuctionSystem\\presentation\\wwwroot\\uploads\\dc8f9366-12a7-4871-a1c4-80fb7998eb66_XX\\d03df5dc-9c33-490a-8d6d-3675dc60d11f_1754282836_0_vehicles_export_2025-07-31.xls",
       "SourceId": "Presentation",
@@ -81,6 +165,334 @@
     }
   ],
   "Endpoints": [
+    {
+      "Route": "uploads/1009a068-aeba-4a81-acb9-70288eae50b7_string/542ea465-321a-418a-8e69-cf59d91432a3_Portfolio .91utgkbxyx.doc",
+      "AssetFile": "C:\\Users\\MSI\\Desktop\\AuctionSystem\\presentation\\wwwroot\\uploads\\1009a068-aeba-4a81-acb9-70288eae50b7_string\\542ea465-321a-418a-8e69-cf59d91432a3_Portfolio .doc",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "29696"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/msword"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"s/L5j2XtQjab6cB4B8MzE4ATBFKLtQI6HYOORYoWRFI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 16 Aug 2025 16:49:47 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "91utgkbxyx"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/1009a068-aeba-4a81-acb9-70288eae50b7_string/542ea465-321a-418a-8e69-cf59d91432a3_Portfolio .doc"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-s/L5j2XtQjab6cB4B8MzE4ATBFKLtQI6HYOORYoWRFI="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/1009a068-aeba-4a81-acb9-70288eae50b7_string/542ea465-321a-418a-8e69-cf59d91432a3_Portfolio .doc",
+      "AssetFile": "C:\\Users\\MSI\\Desktop\\AuctionSystem\\presentation\\wwwroot\\uploads\\1009a068-aeba-4a81-acb9-70288eae50b7_string\\542ea465-321a-418a-8e69-cf59d91432a3_Portfolio .doc",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "29696"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/msword"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"s/L5j2XtQjab6cB4B8MzE4ATBFKLtQI6HYOORYoWRFI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 16 Aug 2025 16:49:47 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-s/L5j2XtQjab6cB4B8MzE4ATBFKLtQI6HYOORYoWRFI="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/303dade5-2267-454d-9002-b01cae64481f_string/5e66548c-9b70-4965-8aac-a2082488e765_Portfolio .91utgkbxyx.doc",
+      "AssetFile": "C:\\Users\\MSI\\Desktop\\AuctionSystem\\presentation\\wwwroot\\uploads\\303dade5-2267-454d-9002-b01cae64481f_string\\5e66548c-9b70-4965-8aac-a2082488e765_Portfolio .doc",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "29696"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/msword"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"s/L5j2XtQjab6cB4B8MzE4ATBFKLtQI6HYOORYoWRFI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 16 Aug 2025 16:36:30 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "91utgkbxyx"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/303dade5-2267-454d-9002-b01cae64481f_string/5e66548c-9b70-4965-8aac-a2082488e765_Portfolio .doc"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-s/L5j2XtQjab6cB4B8MzE4ATBFKLtQI6HYOORYoWRFI="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/303dade5-2267-454d-9002-b01cae64481f_string/5e66548c-9b70-4965-8aac-a2082488e765_Portfolio .doc",
+      "AssetFile": "C:\\Users\\MSI\\Desktop\\AuctionSystem\\presentation\\wwwroot\\uploads\\303dade5-2267-454d-9002-b01cae64481f_string\\5e66548c-9b70-4965-8aac-a2082488e765_Portfolio .doc",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "29696"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/msword"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"s/L5j2XtQjab6cB4B8MzE4ATBFKLtQI6HYOORYoWRFI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 16 Aug 2025 16:36:30 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-s/L5j2XtQjab6cB4B8MzE4ATBFKLtQI6HYOORYoWRFI="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/85e04084-4d09-449a-a21b-402586222a2f_string/38130515-687f-45a0-a202-da5fbb4473b9_Portfolio .91utgkbxyx.doc",
+      "AssetFile": "C:\\Users\\MSI\\Desktop\\AuctionSystem\\presentation\\wwwroot\\uploads\\85e04084-4d09-449a-a21b-402586222a2f_string\\38130515-687f-45a0-a202-da5fbb4473b9_Portfolio .doc",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "29696"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/msword"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"s/L5j2XtQjab6cB4B8MzE4ATBFKLtQI6HYOORYoWRFI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 16 Aug 2025 19:08:18 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "91utgkbxyx"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/85e04084-4d09-449a-a21b-402586222a2f_string/38130515-687f-45a0-a202-da5fbb4473b9_Portfolio .doc"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-s/L5j2XtQjab6cB4B8MzE4ATBFKLtQI6HYOORYoWRFI="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/85e04084-4d09-449a-a21b-402586222a2f_string/38130515-687f-45a0-a202-da5fbb4473b9_Portfolio .doc",
+      "AssetFile": "C:\\Users\\MSI\\Desktop\\AuctionSystem\\presentation\\wwwroot\\uploads\\85e04084-4d09-449a-a21b-402586222a2f_string\\38130515-687f-45a0-a202-da5fbb4473b9_Portfolio .doc",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "29696"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/msword"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"s/L5j2XtQjab6cB4B8MzE4ATBFKLtQI6HYOORYoWRFI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 16 Aug 2025 19:08:18 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-s/L5j2XtQjab6cB4B8MzE4ATBFKLtQI6HYOORYoWRFI="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/9a79eeae-3aad-4b0a-92aa-9dcf0ee2300c_string/417c78b3-1cc7-41bc-bca1-8eb71749a310_Portfolio .91utgkbxyx.doc",
+      "AssetFile": "C:\\Users\\MSI\\Desktop\\AuctionSystem\\presentation\\wwwroot\\uploads\\9a79eeae-3aad-4b0a-92aa-9dcf0ee2300c_string\\417c78b3-1cc7-41bc-bca1-8eb71749a310_Portfolio .doc",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "29696"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/msword"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"s/L5j2XtQjab6cB4B8MzE4ATBFKLtQI6HYOORYoWRFI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 16 Aug 2025 16:12:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "91utgkbxyx"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/9a79eeae-3aad-4b0a-92aa-9dcf0ee2300c_string/417c78b3-1cc7-41bc-bca1-8eb71749a310_Portfolio .doc"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-s/L5j2XtQjab6cB4B8MzE4ATBFKLtQI6HYOORYoWRFI="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/9a79eeae-3aad-4b0a-92aa-9dcf0ee2300c_string/417c78b3-1cc7-41bc-bca1-8eb71749a310_Portfolio .doc",
+      "AssetFile": "C:\\Users\\MSI\\Desktop\\AuctionSystem\\presentation\\wwwroot\\uploads\\9a79eeae-3aad-4b0a-92aa-9dcf0ee2300c_string\\417c78b3-1cc7-41bc-bca1-8eb71749a310_Portfolio .doc",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "29696"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/msword"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"s/L5j2XtQjab6cB4B8MzE4ATBFKLtQI6HYOORYoWRFI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 16 Aug 2025 16:12:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-s/L5j2XtQjab6cB4B8MzE4ATBFKLtQI6HYOORYoWRFI="
+        }
+      ]
+    },
     {
       "Route": "uploads/dc8f9366-12a7-4871-a1c4-80fb7998eb66_XX/d03df5dc-9c33-490a-8d6d-3675dc60d11f_1754282836_0_vehicles_export_2025-07-31.lcwxz6b2rk.xls",
       "AssetFile": "C:\\Users\\MSI\\Desktop\\AuctionSystem\\presentation\\wwwroot\\uploads\\dc8f9366-12a7-4871-a1c4-80fb7998eb66_XX\\d03df5dc-9c33-490a-8d6d-3675dc60d11f_1754282836_0_vehicles_export_2025-07-31.xls",

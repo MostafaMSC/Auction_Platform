@@ -9,33 +9,37 @@ public class ApplicationDbContextFactory : IDesignTimeDbContextFactory<Applicati
     public ApplicationDbContext CreateDbContext(string[] args)
     {
         var optionsBuilder = new DbContextOptionsBuilder<ApplicationDbContext>();
-        
-        // Try to find appsettings.json in presentation project first
+
+        // محاولة العثور على appsettings.json في مشروع العرض (presentation) أولاً
         string basePath = Directory.GetCurrentDirectory();
         string presentationPath = Path.Combine(basePath, "../presentation");
-        
-        // Check if we're in infrastructure directory and presentation exists
+
+        // إذا كنا في مجلد infrastructure ووجدنا مجلد presentation يحتوي على appsettings.json
         if (Directory.Exists(presentationPath) && File.Exists(Path.Combine(presentationPath, "appsettings.json")))
         {
-            basePath = presentationPath;
+            basePath = presentationPath; // استخدم مسار المشروع الرئيسي للـ configuration
         }
-        
+
+        // بناء الإعدادات من ملفات json
         var configuration = new ConfigurationBuilder()
             .SetBasePath(basePath)
             .AddJsonFile("appsettings.json", optional: false)
             .AddJsonFile("appsettings.Development.json", optional: true)
             .Build();
 
+        // قراءة سلسلة الاتصال
         var connectionString = configuration.GetConnectionString("DefaultConnection");
-        
+
+        // إذا لم توجد سلسلة الاتصال في الملفات، نستخدم fallback
         if (string.IsNullOrEmpty(connectionString))
         {
-            // Fallback connection string if not found in config
             connectionString = "Server=9F41;Database=AuctionSystemDb;User Id=loan;Password=1234;TrustServerCertificate=True;";
         }
 
+        // استخدام SQL Server
         optionsBuilder.UseSqlServer(connectionString);
 
+        // إعادة DbContext جاهز للاستخدام مع Migrations
         return new ApplicationDbContext(optionsBuilder.Options);
     }
 }

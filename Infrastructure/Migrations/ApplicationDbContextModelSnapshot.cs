@@ -162,18 +162,13 @@ namespace Infrastructure.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("UpdatedAt")
-                        .HasColumnType("datetime2");
-
-                    b.Property<int>("UserId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("UserId1")
+                    b.Property<string>("UserId")
+                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("UserId1");
+                    b.HasIndex("UserId");
 
                     b.ToTable("Notifications");
                 });
@@ -609,11 +604,11 @@ namespace Infrastructure.Migrations
 
             modelBuilder.Entity("AuctionSystem.Domain.Entities.Notification", b =>
                 {
-                    b.HasOne("AuctionSystem.Domain.Entities.User", "User")
+                    b.HasOne("AuctionSystem.Domain.Entities.User", null)
                         .WithMany("Notifications")
-                        .HasForeignKey("UserId1");
-
-                    b.Navigation("User");
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("AuctionSystem.Domain.Entities.Project", b =>

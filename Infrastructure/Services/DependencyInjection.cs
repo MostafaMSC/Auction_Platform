@@ -11,35 +11,41 @@ using AuctionSystem.Infrastructure.Identity;
 namespace AuctionSystem.Infrastructure
 {
     public static class DependencyInjection
+{
+    // امتداد لـ IServiceCollection لإضافة كل البنية التحتية (Infrastructure)
+    public static IServiceCollection AddInfrastructure(
+        this IServiceCollection services, 
+        IConfiguration configuration)
     {
-        public static IServiceCollection AddInfrastructure(
-            this IServiceCollection services, 
-            IConfiguration configuration)
-        {
-            // Database
-            services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
+        // ===== إعداد قاعدة البيانات =====
+        // ربط DbContext مع SQL Server باستخدام سلسلة الاتصال من appsettings.json
+        services.AddDbContext<ApplicationDbContext>(options =>
+            options.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
 
-            // Repositories
-            services.AddScoped<IAuctionRepository, AuctionRepository>();
-            services.AddScoped<IBidRepository, BidRepository>();
-            services.AddScoped<ICategoryRepository, CategoryRepository>();
-            services.AddScoped<INotificationRepository, NotificationRepository>();
-            services.AddScoped<IProjectRepository, ProjectRepository>();
-            services.AddScoped<IUserRepository, UserRepository>();
-            services.AddScoped<IVerficationDocRepository, VerificationDocumentRepository>();
+        // ===== تسجيل المستودعات (Repositories) =====
+        // كل Repository يمثل واجهة للتعامل مع البيانات
+        services.AddScoped<IAuctionRepository, AuctionRepository>();
+        services.AddScoped<IBidRepository, BidRepository>();
+        services.AddScoped<ICategoryRepository, CategoryRepository>();
+        services.AddScoped<INotificationRepository, NotificationRepository>();
+        services.AddScoped<IProjectRepository, ProjectRepository>();
+        services.AddScoped<IUserRepository, UserRepository>();
+        services.AddScoped<IVerficationDocRepository, VerificationDocumentRepository>();
 
-            // Identity Services (custom authentication / registration logic if needed)
-            services.AddScoped<IAuthService, AuthService>();
-            services.AddScoped<IJwtTokenService, JwtTokenService>();
-            services.AddScoped<IUserAuthenticationService, UserAuthenticationService>();
-            services.AddScoped<IUserRegistrationService, UserRegistrationService>();
+        // ===== تسجيل خدمات الهوية (Identity / Authentication) =====
+        // خدمات مخصصة للتسجيل، تسجيل الدخول، JWT token
+        services.AddScoped<RoleService>(); // إدارة الأدوار
+        services.AddScoped<IAuthService, AuthService>(); // الخدمة العامة للمصادقة
+        services.AddScoped<IJwtTokenService, JwtTokenService>(); // إنشاء والتحقق من التوكن
+        services.AddScoped<IUserAuthenticationService, UserAuthenticationService>(); // تسجيل الدخول
+        services.AddScoped<IUserRegistrationService, UserRegistrationService>(); // تسجيل مستخدم جديد
 
-            // General Infrastructure Services
-            services.AddScoped<IFileStorageService, LocalFileStorageService>();
-            services.AddScoped<INotificationService, NotificationService>();
+        // ===== خدمات عامة أخرى =====
+        services.AddScoped<IFileStorageService, LocalFileStorageService>(); // تخزين الملفات
+        services.AddScoped<INotificationService, NotificationService>(); // إشعارات المستخدمين
 
-            return services;
-        }
+        return services; // إرجاع IServiceCollection لإمكانية السلسلة
     }
+}
+
 }
